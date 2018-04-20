@@ -18,7 +18,7 @@ The main goal of this assignment is to implement an inverse kinematics method fo
 
 As we develop more code for our robot we want to keep it organized in a centralized file structure. If we do this in just the right way Python will treat this file structure as a special _module_ and we can easily import the code we are developing into new python code. I am providing a boilerplate version of this module, it is a folder called ```robot``` (this is the module name). Right now it contains two files, ```___init___.py```, and ```leg.py```. The first file tells python this folder is to be treated as a module, so when we type ```import robot``` python will run whatever code is in ```___init___.py```. In ```___init___.py``` we put a simple import statement to import the ```Leg``` class we will develop, this class will be located in the ```leg.py``` file. 
 
-To use this robot module, _place it in the Odrive/tools/ directory_ and then write your Jupyter notebook in the same directory. This way Python will know where the robot module is defined.
+To use this robot module, _place it in the Odrive/tools/ directory_ and then write your Jupyter notebook in the same directory. This way Python will know where the robot module is defined without having to add it to the python path.
 
 #### The leg class
 For controlling our leg we are going to use the object oriented capabilities of Python to develop a leg class (*find out more about classes* [here](http://python-textbok.readthedocs.io/en/1.0/Classes.html)).
@@ -58,7 +58,7 @@ The 5-bar is defined with parameters
 | $$\alpha_R$$ | Right knee angle |
 | $$\alpha_L$$ | Left knee angle |
 
-<center>![Schematic](5-bar.png)</center>
+![Schematic](5-bar.png)
 
 After we have the forward kinematics we can compute the Jacobian of the foot position with respect to the motor angles. The symbolic package ```sympy``` will be very helpful for this. _This is step 2_.
 
