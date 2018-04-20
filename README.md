@@ -42,7 +42,7 @@ _An important note, after you edit the leg.py file and you want to test it in th
 
 ### Inverse kinematics
 
-We will cover inverse kinematics in depth on Monday in class. However, to get you started what we need to do is first fully define the forward kinematics of the leg which means finding an expression for the foot position (x y) as a function of the two motor angles. This is complicated because three of the joints are unactuated, so we need to do some fancy geometry to solve this problem. _This is step 1_.
+We will cover inverse kinematics in depth on Monday in class. However, to get you started what we need to do is first fully define the forward kinematics of the leg which means finding an expression for the foot position (x y) as a function of the two motor angles. This is complicated because three of the joints are unactuated, so we need to do some fancy geometry to solve the internal angles of the leg whic will then give us (x,y). __Step 1 is to write a class function__ ```compute_internal_angles(theta0, theta1)``` __that symbolically returns alpha0 and alpha1 for inputs theta0, theta1__. You can test that this works by using the ```draw_leg``` function.
 
 For the geometry of the robot let's use the following definitions: 
 
@@ -60,9 +60,9 @@ The 5-bar is defined with parameters
 
 ![Schematic](5-bar.png)
 
-After we have the forward kinematics we can compute the Jacobian of the foot position with respect to the motor angles. The symbolic package ```sympy``` will be very helpful for this. _This is step 2_.
+After we have the forward kinematics we can compute the Jacobian of the foot position with respect to the motor angles. The symbolic package ```sympy``` will be very helpful for this. __This is step 2__.
 
-Lastly, we need to write our IK solver. There are several ways to do this but we will use a simple iterative solver to compute the IK. I will describe this premise in depth on Monday, but briefly here: We know that inverting the Jacobian and multiplying by a velocity in (x, y) we get values for the joint velocities to move. If we initialize our solver with some random joint angles, we can then figure out where the foot is in this position with respect to where we want to go. This error vector is the direction we want to move so we can multiply it by our inverse jacobian to get motor velocity values that will push us towards the desired endpoint. If we repeat this process sequentially, and take very small steps each time, we will end up at our desired (x, y) location and then we can report back what the joint angles are. We will implement this in the ```Leg``` class. _This is step 3_. 
+Lastly, we need to write our IK solver. There are several ways to do this but we will use a simple iterative solver to compute the IK. I will describe this premise in depth on Monday, but briefly here: We know that inverting the Jacobian and multiplying by a velocity in (x, y) we get values for the joint velocities to move. If we initialize our solver with some random joint angles, we can then figure out where the foot is in this position with respect to where we want to go. This error vector is the direction we want to move so we can multiply it by our inverse jacobian to get motor velocity values that will push us towards the desired endpoint. If we repeat this process sequentially, and take very small steps each time, we will end up at our desired (x, y) location and then we can report back what the joint angles are. We will implement this in the ```Leg``` class. __This is step 3__. 
 
 
 
