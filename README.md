@@ -50,13 +50,13 @@ The 5-bar is defined with parameters
 
 | Symbol | Parameter | 
 |---|---|
-|$$l_0$$ | Base link | 
-| $$l_1$$ | Thigh link |
-| $$l_2$$ | Shin link | 
-| $$\theta_R$$ | Right hip angle | 
-| $$\theta_L$$ | Left hip angle | 
-| $$\alpha_R$$ | Right knee angle |
-| $$\alpha_L$$ | Left knee angle |
+|l_0 | Base link | 
+| l_1 | Thigh link |
+| l_2 | Shin link | 
+| \theta_R | Right hip angle | 
+| \theta_L | Left hip angle | 
+| \alpha_R | Right knee angle |
+| \alpha_L | Left knee angle |
 
 ![Schematic](5-bar.png)
 
