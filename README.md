@@ -4,7 +4,7 @@
 
 The main goal of this assignment is to implement an inverse kinematics method for our leg so that we can directly command positions for the foot. You will demonstrate your ability to do this by generating an *interesting* trajectory for the foot to trace out. For instance I generated the bat symbol below for my trajectory.
 
-[Bat symbol](movie.gif)
+![Bat symbol](movie.gif)
 
 ## Deliverables
 
