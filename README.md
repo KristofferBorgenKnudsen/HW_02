@@ -9,14 +9,14 @@ The main goal of this assignment is to implement an inverse kinematics method fo
 ## Deliverables
 
 1. A video of your leg moving along your chosen trajectory. Post this to youtube and include in the end of your Jupyter notebook.
-2. A video of the simulated leg moving along the same trajectory. *You can use the provided ```draw_robot``` function and other suggestions are also provided in the notebook*.
+2. A video of the simulated leg moving along the same trajectory. *You can use the provided* ```draw_robot``` *function*.
 3. Your completed ```leg.py``` file with the class methods you will implement as part of the assignment.
 
 ## Assignment details
 
 ### The robot module
 
-As we develop more code for our robot it makes sense to keep everything neat and organized in a centralized file structure. Furthermore, if we do this just right Python will treat this file structure as a special _module_ and we can easily import the code we are developing into new programs. I am providing the boilerplate version of this module, it is a folder called ```robot``` (this is the module name). Right now it contains two files, ```___init___.py```, and ```leg.py```. The first file tells python this folder is to be treated as a module, so when we type ```import robot``` python will run whatever code is in ```___init___.py```. In ```___init___.py``` we put a simple import statement to import the ```Leg``` class we will develop, this class will be located in the ```leg.py``` file. 
+As we develop more code for our robot we want to keep it organized in a centralized file structure. If we do this in just the right way Python will treat this file structure as a special _module_ and we can easily import the code we are developing into new python code. I am providing a boilerplate version of this module, it is a folder called ```robot``` (this is the module name). Right now it contains two files, ```___init___.py```, and ```leg.py```. The first file tells python this folder is to be treated as a module, so when we type ```import robot``` python will run whatever code is in ```___init___.py```. In ```___init___.py``` we put a simple import statement to import the ```Leg``` class we will develop, this class will be located in the ```leg.py``` file. 
 
 To use this robot module, _place it in the Odrive/tools/ directory_ and then write your Jupyter notebook in the same directory. This way Python will know where the robot module is defined.
 
